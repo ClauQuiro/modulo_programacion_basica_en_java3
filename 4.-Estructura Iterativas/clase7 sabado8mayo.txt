@@ -1,0 +1,223 @@
+1)Sumar multiplos de 5
+
+Variables: cantNumeros, numero, Suma = 0 (integer)
+
+Escribir: "Ingrese cantidadNumeros ".
+Leer cantNumeros
+
+
+Para(i=1; i<=cantNumeros; i++) hacer
+
+	Escribir: "Ingrese numero ".
+	Leer numero
+	Si (numero MOD 5 = 0) entonces
+		Suma = Suma + numero	
+	FinSi
+
+finPara
+
+
+
+
+
+
+2)MultiplicacionPrimos
+
+Nota : Números primos son divisible por 1 y por el mismo número
+
+Variables: cantNumeros, numero, x, contador, Multi = 1 (integer)
+
+Escribir: "Ingrese cantidadNumeros ".
+Leer cantNumeros
+
+
+Para(i=1; i<=cantNumeros; i++) hacer
+
+	Escribir: "Ingrese numero ".
+	Leer numero
+	
+	x=1
+	contador = 0;
+	
+	Mientras x<=numero hacer
+		
+		Si numero mod x == 0 entonces
+			contador++
+		FinSi
+		x = x + 1
+	
+	FinMientras
+	
+	Si contador == 2 y numero != 1 entonces
+		Multi = Multi * numero
+	FinSi
+	
+finPara
+
+Escribir: "La multiplicacion es ", Multi
+
+Fin Funcion
+
+
+
+
+
+3)Funcion: sumarPares
+
+Variables: cantNumeros, numero, Suma = 0 (integer)
+
+Escribir: "Ingrese cantidadNumeros ".
+Leer cantNumeros
+
+
+Para(i=1; i<=cantNumeros; i++) hacer
+
+	Escribir: "Ingrese numero ".
+	Leer numero
+	
+	Si numero mod 2 == 0 entonces
+		Suma = Suma + numero
+	FinSi
+	
+finPara
+
+Escribir: "La suma es ", Suma
+
+Fin Funcion
+
+
+
+
+
+
+
+4)Funcion: numerosMultiplos5
+
+Variables: cantNumeros, numero, contador = 0 (integer)
+
+Escribir: "Ingrese cantidadNumeros ".
+Leer cantNumeros
+
+
+Para(i=1; i<=cantNumeros; i++) hacer
+
+	Escribir: "Ingrese numero ".
+	Leer numero
+	
+	Si numero mod 5 == 0 entonces
+		contador++
+	FinSi
+	
+finPara
+
+Escribir: "La cantidad de multiplos de 5 es ", contador
+
+Fin Funcion
+
+
+
+
+5)SumarParesImpares
+
+Variables: cantNumeros, numero, contadorPar=0, contadorImpar=0, SumaPar, SumaImpar = 0 (integer)
+
+Escribir: "Ingrese cantidadNumeros ".
+Leer cantNumeros
+
+
+Para(i=1; i<=cantNumeros; i++) hacer
+
+	Escribir: "Ingrese numero ".
+	Leer numero
+	
+	Si numero mod 2 == 0 entonces
+		SumaPar = SumaPar + numero
+		contadorPar++
+	Sino
+	    SumaImpar = SumaImpar + numero
+		contadorImpar++
+	FinSi
+	
+finPara
+
+Escribir: "La sumaPar es ", SumaPar, " y la cantidad es ", contadorPar
+Escribir: "La sumaImpar es ", SumaImpar, " y la cantidad es ", contadorImpar
+
+
+
+
+
+
+
+
+6)sumar Pares y Multiplicar Impares
+
+Variables: cantNumeros, numero, contPar=0, contImpar=0, SumaPar=0, Multi = 1 (integer)
+
+Escribir: "Ingrese cantidadNumeros ".
+Leer cantNumeros
+
+
+Para(i=1; i<=cantNumeros; i++) hacer
+
+	Escribir: "Ingrese numero ".
+	Leer numero
+	
+	Si numero mod 2 == 0 entonces
+		SumaPar = SumaPar + numero
+		contPar++
+	Sino
+	    Multi = Multi * numero
+		contImpar++
+	FinSi
+	
+finPara
+
+Escribir: "La sumaPar es ", SumaPar
+Escribir: "La Multiplicacion es ", Multi
+
+Segun contPar
+	(>contImpar) Escribir: "cantidad de pares es mayor que cantidad impares: ", contaPar, " ", contImpar
+	(=contImpar) Escribir: "cantidad de pares es igual que cantidad impares: ", contPar, " ", contImpar
+	(<contImpar) Escribir: "cantidad de pares es menor que cantidad impares: ", contPar, " ", contImpar
+Fin Segun
+
+
+
+
+
+
+
+
+
+7)Calcular promedios
+
+Variables: CantidadNotas nota, promedio=0, Suma = 0 (integer)
+
+Escribir: "Ingrese cantidad de notas a promediar ".
+Leer CantidadNotas
+
+Si CantidadNotas == 0 entonces
+	Escribir: "cantidad de notas debe ser mayor que 0 ".
+Sino
+
+	Para(i=1; i<=CantidadNotas; i++) hacer
+
+		Escribir: "Ingrese nota ".
+		Leer nota
+		
+		Suma = Suma + nota
+		
+	finPara
+
+	promedio = Suma/CantidadNotas
+	
+	Si promedio >= 4 entonces
+		Escribir: "Aprobado ".
+	Sino
+		Escribir: "Reprobado ".
+	FinSi
+
+FinSi 
+
+
